@@ -1,16 +1,29 @@
-import React from 'react'
-import Layout from './components/layout/Layout'
-import Home from './pages/home/Home'
-import './style.css'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import Home from "./pages/home/Home";
+import TShirtDetails from './pages/tshirt-details/TShirtDetails'
+import "./style.css";
 
 const App = () => {
     return (
-        <div>
-            <Layout>
-                <Home />
-            </Layout>
-        </div>
-    )
-}
+        <Router>
+            <Switch>
 
-export default App
+                <Route path="/t-shirt-details">
+                    <Layout>
+                        <TShirtDetails />
+                    </Layout>
+                </Route>
+
+                <Route path="/">
+                    <Layout>
+                        <Home />
+                    </Layout>
+                </Route>
+            </Switch>
+        </Router>
+    );
+};
+
+export default App;
