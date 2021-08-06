@@ -2,6 +2,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 
 const useStyles = makeStyles((theme) => ({
+    footerSection: {
+        background: '#fff'
+    },
     footerWrap: {
         display: 'flex',
         justifyContent: 'space-between',
@@ -43,7 +46,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
         footerWrap: {
             flexDirection: 'column',
-            alignItems: 'center'
+            alignItems: 'center',
+            padding: '25px 0'
         }, 
         footerPayment: {
             "& > img": {

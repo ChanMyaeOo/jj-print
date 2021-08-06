@@ -7,7 +7,7 @@ import useStyles from './styles'
 const Footer = () => {
     const classes = useStyles();
     return (
-        <div>
+        <div className={classes.footerSection}>
             <div className={classes.footerWrap}>
                 <img src={LogoImg} alt="logo" className={classes.footerLogo} />
 

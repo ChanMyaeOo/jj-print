@@ -20,7 +20,7 @@ const Header = () => {
         overlay.style.display = 'block'
     }
     return (
-        <div>
+        <div className={classes.headerSection}>
             <div className={classes.barWrap}>
                 <ul className={classes.headerBar}>
                     <li>About Us</li>

@@ -1,6 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
+    headerSection: {
+        background: '#fff'
+    },
     barWrap: {
         background: '#000',
         width: '100%',
@@ -30,7 +33,8 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         margin: '0 auto',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        
     },
     headerPhone: {
         color: '#27aabb',
