@@ -3,12 +3,19 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/home/Home";
 import TShirtDetails from './pages/tshirt-details/TShirtDetails'
+import MugsDetails from './pages/mugs-details/MugsDetails'
 import "./style.css";
 
 const App = () => {
     return (
         <Router>
             <Switch>
+
+                <Route path="/mugs-details">
+                    <Layout>
+                        <MugsDetails />
+                    </Layout>
+                </Route>
 
                 <Route path="/t-shirt-details">
                     <Layout>
