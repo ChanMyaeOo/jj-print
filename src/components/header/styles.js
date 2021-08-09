@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     headerBar: {
         display: 'flex',
         justifyContent: 'flex-end',
+        alignItems: 'center',
         color: '#fff',
         width: '90%',
         margin: '0 auto',
@@ -23,6 +24,27 @@ const useStyles = makeStyles((theme) => ({
             listStyle: 'none',
             padding: '9px 15px'
         }
+    },
+    hdMailIcon: {
+        fontSize: '18px'
+    },
+    sIcons: {
+        fontSize: '18px',
+        padding: '0 5px'
+    },
+    hdCheckout: {
+        background: '#27aabb',
+        margin: '5px',
+        textTransform: 'uppercase',
+        fontSize: '85%',
+        fontWeight: 'bold'
+    },
+    basketIcon: {
+        fontSize: '18px'
+    },
+    basketList: {
+        display: 'flex',
+        alignItems: 'center'
     },
     logo: {
         width: '90px',
@@ -126,6 +148,10 @@ const useStyles = makeStyles((theme) => ({
     resLogo: {
         width: '75px',
         height: '66px'
+    },
+    smBasketWrap: {
+        display: 'flex',
+        alignItems: 'center',
     },
 
     // for overlay

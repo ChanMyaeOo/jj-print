@@ -1,9 +1,11 @@
 import React from "react";
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import MenuIcon from '@material-ui/icons/Menu';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import CloseIcon from '@material-ui/icons/Close';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import useStyles from "./styles";
 import Logo from '../../images/logo.png'
 
@@ -25,12 +27,11 @@ const Header = () => {
                 <ul className={classes.headerBar}>
                     <li>About Us</li>
                     <li>Contact Us</li>
-                    <li>Email</li>
-                    <li>Social</li>
+                    <li><MailOutlineIcon className={classes.hdMailIcon}/></li>
+                    <li><FacebookIcon className={classes.sIcons} /> <InstagramIcon className={classes.sIcons}/> <TwitterIcon className={classes.sIcons}/></li>
                     <li>Login/Register</li>
-                    <li>Checkout</li>
-                    <li>£ 0</li>
-                    <li>Card</li>
+                    <li className={classes.hdCheckout}>Checkout</li>
+                    <li className={classes.basketList}><ShoppingBasketIcon className={classes.basketIcon} />&nbsp;<span>0</span></li>
                 </ul>
                 <div>Ad Print Delivered in High Quality</div>
             </div>
@@ -112,7 +113,7 @@ const Header = () => {
                 <div className={classes.resHeader}>
                     <MenuIcon onClick={handleOverlayOpen}/>
                     <img src={Logo} alt="logo" className={classes.resLogo} />
-                    <div>£ 0</div>
+                    <div className={classes.smBasketWrap}><ShoppingBasketIcon />&nbsp;<span>0</span></div>
                 </div>
             </div>
 
