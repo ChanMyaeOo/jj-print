@@ -7,12 +7,19 @@ import MugsDetails from './pages/mugs-details/MugsDetails'
 import BCardsDetails from './pages/b-cards-details/BCardsDetails'
 import DFlyersDetails from './pages/d-flyers-details/DFlyersDetails'
 import StampsDetails from './pages/stamps-details/StampsDetails'
+import EnvelopesDetails from './pages/envelopes-details/EnvelopesDetails'
 import "./style.css";
 
 const App = () => {
     return (
         <Router>
             <Switch>
+
+                <Route path="/envelopes-details">
+                    <Layout>
+                        <EnvelopesDetails />
+                    </Layout>
+                </Route>
 
                 <Route path="/stamps-details">
                     <Layout>

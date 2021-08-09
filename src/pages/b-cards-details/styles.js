@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     bCardImg: {
         display: 'block',
         margin: '0 auto',
+        width: '100%'
     },
 
     rightContainer: {
@@ -137,7 +138,7 @@ const useStyles = makeStyles((theme) => ({
             width: '90%'
         },
         bCardContent: {
-            width: '80%'
+            width: '90%'
         },
         priceSection: {
             width: '80%'

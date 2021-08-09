@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     stampsImg: {
         display: 'block',
         margin: '0 auto',
+        width: '100%'
     },
 
     rightContainer: {

@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     mugImg: {
         display: 'block',
         margin: '0 auto',
+        width: '100%'
     },
 
     rightContainer: {
@@ -43,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
     priceSection: {
         display: 'flex',
         justifyContent: 'space-between',
+        alignItems: 'center',
         margin: '25px auto',
         width: '95%',
         "& > p": {
@@ -138,7 +140,7 @@ const useStyles = makeStyles((theme) => ({
             width: '90%'
         },
         mugsList: {
-            width: '80%'
+            width: '90%'
         },
         priceSection: {
             width: '80%'

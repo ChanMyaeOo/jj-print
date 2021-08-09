@@ -2,18 +2,19 @@ import { makeStyles } from "@material-ui/core/styles";
 
 
 const useStyles = makeStyles((theme) => ({
-   dFlyerWrap: {
+    envelopeWrap: {
         display: 'flex',
         width: '95%',
         margin: '25px auto',
         padding: '30px 0',
         background: '#fff'
     },
+
     leftContainer: {
         width: '50%'
     },
 
-    dFlyerImg: {
+    envelopeImg: {
         display: 'block',
         margin: '0 auto',
         width: '100%'
@@ -24,21 +25,24 @@ const useStyles = makeStyles((theme) => ({
         width: '50%'
     },
 
-    dFlyerTitle: {
+    envelopeTitle: {
         fontSize: '27px',
         padding: '25px 0',
         textAlign: 'center',
         textTransform: 'uppercase',
     },
 
-    dFlyerContent: {
+    envelopeList: {
         marginBottom: '15px',
         marginLeft: '10px',
-        "& > h5": {
-            fontSize: '18px',
-            padding: '20px 0 10px 0'
-        },
         "& > p": {
+            lineHeight: '1.5rem'
+        }
+    },
+
+    listWrap: {
+        marginLeft: '20px',
+        "& > li": {
             lineHeight: '1.5rem'
         }
     },
@@ -62,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     formColor: {
-        fontSize: '16px',
+        fontSize: '17px',
     },
 
     colorSection: {
@@ -71,10 +75,10 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         width: '95%',
         margin: '0 auto',
-        marginTop: '25px'
+        marginBottom: '25px'
     },
     selectWrap: {
-        width: '60%',
+        width: '80%',
         height: '40px',
         background: '#f2f2f2',
         border: '1px solid #ddd',
@@ -87,21 +91,22 @@ const useStyles = makeStyles((theme) => ({
         width: '95%'
     },
 
-     quantity: {
+    quantity: {
         background: '#00aeef',
-        border: '2px solid #f2f2f2',
-        padding: '25px',
+        outline: '2px solid #f2f2f2',
+        padding: '25px 0',
         textAlign: 'center',
         color: '#fff',
+        textTransform: 'uppercase',
     },
 
-    qtyPrice: {
+    price: {
         textAlign: 'center',
-        padding: '25px',
-        border: '2px solid #f2f2f2',
+        padding: '25px 0',
+        outline: '2px solid #f2f2f2',
     },
 
-     cardBtn: {
+    cardBtn: {
         width: '95%',
         display: 'block',
         margin: '0 auto',
@@ -117,15 +122,15 @@ const useStyles = makeStyles((theme) => ({
 
     [theme.breakpoints.down('md')]: {
         quantity: {
-            padding: '20px 10px'
+            padding: '20px 0'
         },
-        qtyPrice: {
-            padding: '20px 10px'
+        price: {
+            padding: '20px 0'
         }
     },
 
-    [theme.breakpoints.down('sm')]: {
-        dFlyerWrap: {
+     [theme.breakpoints.down('sm')]: {
+        envelopeWrap: {
             flexDirection: 'column'
         },
         leftContainer: {
@@ -136,12 +141,12 @@ const useStyles = makeStyles((theme) => ({
             padding: 0
         }
     },
-
+    
     [theme.breakpoints.down('xs')]: {
-        dFlyerImg: {
+        envelopeImg: {
             width: '90%'
         },
-        dFlyerContent: {
+        envelopeList: {
             width: '90%'
         },
         priceSection: {
@@ -151,10 +156,10 @@ const useStyles = makeStyles((theme) => ({
             width: '80%'
         },
         selectWrap: {
-            width: '50%',
+            width: '60%',
         },
         quantity: {
-            padding: '20px 5px'
+            padding: '20px 0'
         }
     }
 }));
