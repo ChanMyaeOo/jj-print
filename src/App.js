@@ -5,12 +5,19 @@ import Home from "./pages/home/Home";
 import TShirtDetails from './pages/tshirt-details/TShirtDetails'
 import MugsDetails from './pages/mugs-details/MugsDetails'
 import BCardsDetails from './pages/b-cards-details/BCardsDetails'
+import DFlyersDetails from './pages/d-flyers-details/DFlyersDetails'
 import "./style.css";
 
 const App = () => {
     return (
         <Router>
             <Switch>
+
+                <Route path="/digital-flyers-details">
+                    <Layout>
+                        <DFlyersDetails />
+                    </Layout>
+                </Route>
 
                 <Route path="/business-cards-details">
                     <Layout>
