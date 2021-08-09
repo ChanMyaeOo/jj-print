@@ -6,15 +6,19 @@ const useStyles = makeStyles((theme) => ({
         width: '330px',
         padding: '15px',
         margin: '0 auto',
+        marginBottom: '20px',
         background: '#fff',
         "& > h5": {
-            color: '#334862',
             fontSize: '20px',
             padding: '20px 0'
         },
         "& > p": {
             lineHeight: '1.5rem'
         }
+    },
+    itemTitle: {
+        textDecoration: 'none',
+        color: '#334862'
     },
     itemImg: {
         width: '100%'
