@@ -7,6 +7,10 @@ const useStyles = makeStyles((theme) => ({
     },
     previewTitle: {
         fontSize: '18px',
+        textDecoration: 'none',
+        color: '#000'
+    },
+    titleWrap: {
         padding: '10px 0'
     },
     previewPrice: {
