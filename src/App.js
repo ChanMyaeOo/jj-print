@@ -4,12 +4,19 @@ import Layout from "./components/layout/Layout";
 import Home from "./pages/home/Home";
 import TShirtDetails from './pages/tshirt-details/TShirtDetails'
 import MugsDetails from './pages/mugs-details/MugsDetails'
+import BCardsDetails from './pages/b-cards-details/BCardsDetails'
 import "./style.css";
 
 const App = () => {
     return (
         <Router>
             <Switch>
+
+                <Route path="/business-cards-details">
+                    <Layout>
+                        <BCardsDetails />
+                    </Layout>
+                </Route>
 
                 <Route path="/mugs-details">
                     <Layout>

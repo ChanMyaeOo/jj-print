@@ -26,7 +26,8 @@ const useStyles = makeStyles((theme) => ({
     tshirtTitle: {
         fontSize: '27px',
         padding: '25px 0',
-        textAlign: 'center'
+        textAlign: 'center',
+        textTransform: 'uppercase',
     },
 
     tshirtList: {
@@ -41,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     priceSection: {
         display: 'flex',
         justifyContent: 'space-between',
+        alignItems: 'center',
         margin: '25px auto',
         width: '95%',
         "& > p": {

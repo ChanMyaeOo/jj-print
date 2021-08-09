@@ -2,19 +2,18 @@ import { makeStyles } from "@material-ui/core/styles";
 
 
 const useStyles = makeStyles((theme) => ({
-    mugsWrap: {
+    bCardWrap: {
         display: 'flex',
         width: '95%',
         margin: '25px auto',
         padding: '30px 0',
         background: '#fff'
     },
-
-     leftContainer: {
+    leftContainer: {
         width: '50%'
     },
 
-    mugImg: {
+    bCardImg: {
         display: 'block',
         margin: '0 auto',
     },
@@ -24,18 +23,17 @@ const useStyles = makeStyles((theme) => ({
         width: '50%'
     },
 
-    mugTitle: {
+    bCardTitle: {
         fontSize: '27px',
         padding: '25px 0',
         textAlign: 'center',
         textTransform: 'uppercase',
     },
 
-    mugsList: {
+    bCardContent: {
         marginBottom: '15px',
         marginLeft: '10px',
-        "& > li": {
-            marginLeft: '20px',
+        "& > p": {
             lineHeight: '1.5rem'
         }
     },
@@ -43,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
     priceSection: {
         display: 'flex',
         justifyContent: 'space-between',
+        alignItems: 'center',
         margin: '25px auto',
         width: '95%',
         "& > p": {
@@ -58,8 +57,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     formColor: {
-        fontSize: '18px',
-        textTransform: 'uppercase',
+        fontSize: '16px',
     },
 
     colorSection: {
@@ -67,10 +65,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '95%',
-        margin: '0 auto'
+        margin: '0 auto',
+        marginTop: '25px'
     },
     selectWrap: {
-        width: '80%',
+        width: '60%',
         height: '40px',
         background: '#f2f2f2',
         border: '1px solid #ddd',
@@ -83,21 +82,21 @@ const useStyles = makeStyles((theme) => ({
         width: '95%'
     },
 
-    mugColor: {
+     quantity: {
         background: '#00aeef',
         border: '2px solid #f2f2f2',
         padding: '25px',
         textAlign: 'center',
-        color: '#fff'
+        color: '#fff',
     },
 
-    mugPrice: {
+    qtyPrice: {
         textAlign: 'center',
         padding: '25px',
         border: '2px solid #f2f2f2',
     },
 
-    cardBtn: {
+     cardBtn: {
         width: '95%',
         display: 'block',
         margin: '0 auto',
@@ -112,16 +111,16 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.down('md')]: {
-        mugColor: {
+        quantity: {
             padding: '20px 10px'
         },
-        mugPrice: {
+        qtyPrice: {
             padding: '20px 10px'
         }
     },
 
-     [theme.breakpoints.down('sm')]: {
-        mugsWrap: {
+    [theme.breakpoints.down('sm')]: {
+        bCardWrap: {
             flexDirection: 'column'
         },
         leftContainer: {
@@ -132,12 +131,12 @@ const useStyles = makeStyles((theme) => ({
             padding: 0
         }
     },
-    
+
     [theme.breakpoints.down('xs')]: {
-        mugImg: {
+        bCardImg: {
             width: '90%'
         },
-        mugsList: {
+        bCardContent: {
             width: '80%'
         },
         priceSection: {
@@ -147,15 +146,11 @@ const useStyles = makeStyles((theme) => ({
             width: '80%'
         },
         selectWrap: {
-            width: '60%',
+            width: '40%',
         },
-        mugColor: {
+        quantity: {
             padding: '20px 5px'
         }
     }
-
-
-
-
 }));
 export default useStyles;
