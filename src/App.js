@@ -6,12 +6,19 @@ import TShirtDetails from './pages/tshirt-details/TShirtDetails'
 import MugsDetails from './pages/mugs-details/MugsDetails'
 import BCardsDetails from './pages/b-cards-details/BCardsDetails'
 import DFlyersDetails from './pages/d-flyers-details/DFlyersDetails'
+import StampsDetails from './pages/stamps-details/StampsDetails'
 import "./style.css";
 
 const App = () => {
     return (
         <Router>
             <Switch>
+
+                <Route path="/stamps-details">
+                    <Layout>
+                        <StampsDetails />
+                    </Layout>
+                </Route>
 
                 <Route path="/digital-flyers-details">
                     <Layout>

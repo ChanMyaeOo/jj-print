@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 
 const useStyles = makeStyles((theme) => ({
-    mugsWrap: {
+    stampsWrap: {
         display: 'flex',
         width: '95%',
         margin: '25px auto',
@@ -10,11 +10,11 @@ const useStyles = makeStyles((theme) => ({
         background: '#fff'
     },
 
-     leftContainer: {
+    leftContainer: {
         width: '50%'
     },
 
-    mugImg: {
+    stampsImg: {
         display: 'block',
         margin: '0 auto',
     },
@@ -24,18 +24,24 @@ const useStyles = makeStyles((theme) => ({
         width: '50%'
     },
 
-    mugTitle: {
+    stampsTitle: {
         fontSize: '27px',
         padding: '25px 0',
         textAlign: 'center',
         textTransform: 'uppercase',
     },
 
-    mugsList: {
+    stampsList: {
         marginBottom: '15px',
         marginLeft: '10px',
+        "& > p": {
+            lineHeight: '1.5rem'
+        }
+    },
+
+    listWrap: {
+        marginLeft: '20px',
         "& > li": {
-            marginLeft: '20px',
             lineHeight: '1.5rem'
         }
     },
@@ -83,15 +89,16 @@ const useStyles = makeStyles((theme) => ({
         width: '95%'
     },
 
-    mugColor: {
+    size: {
         background: '#00aeef',
         border: '2px solid #f2f2f2',
         padding: '25px',
         textAlign: 'center',
-        color: '#fff'
+        color: '#fff',
+        textTransform: 'uppercase',
     },
 
-    mugPrice: {
+    price: {
         textAlign: 'center',
         padding: '25px',
         border: '2px solid #f2f2f2',
@@ -112,16 +119,16 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.down('md')]: {
-        mugColor: {
+        size: {
             padding: '20px 10px'
         },
-        mugPrice: {
+        price: {
             padding: '20px 10px'
         }
     },
 
      [theme.breakpoints.down('sm')]: {
-        mugsWrap: {
+        stampsWrap: {
             flexDirection: 'column'
         },
         leftContainer: {
@@ -134,11 +141,11 @@ const useStyles = makeStyles((theme) => ({
     },
     
     [theme.breakpoints.down('xs')]: {
-        mugImg: {
+        stampsImg: {
             width: '90%'
         },
-        mugsList: {
-            width: '80%'
+        stampsList: {
+            width: '90%'
         },
         priceSection: {
             width: '80%'
@@ -149,10 +156,9 @@ const useStyles = makeStyles((theme) => ({
         selectWrap: {
             width: '60%',
         },
-        mugColor: {
+        size: {
             padding: '20px 5px'
         }
     }
-
 }));
 export default useStyles;
