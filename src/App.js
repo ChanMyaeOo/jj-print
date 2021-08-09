@@ -8,13 +8,14 @@ import BCardsDetails from './pages/b-cards-details/BCardsDetails'
 import DFlyersDetails from './pages/d-flyers-details/DFlyersDetails'
 import StampsDetails from './pages/stamps-details/StampsDetails'
 import EnvelopesDetails from './pages/envelopes-details/EnvelopesDetails'
+import ScrollToTop from './utils/ScrollToTop'
 import "./style.css";
 
 const App = () => {
     return (
         <Router>
+            <ScrollToTop />
             <Switch>
-
                 <Route path="/envelopes-details">
                     <Layout>
                         <EnvelopesDetails />

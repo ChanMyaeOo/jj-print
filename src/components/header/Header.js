@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import MenuIcon from '@material-ui/icons/Menu';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -21,8 +22,21 @@ const Header = () => {
         const overlay = document.getElementById('overlay')
         overlay.style.display = 'block'
     }
+
+    // to handle header fixed on scroll
+    const toggleVisible = () => {
+        const scrolled = document.documentElement.scrollTop;
+        const headerElement = document.getElementById("header")
+        if (scrolled > 300) {
+            headerElement.classList.add(classes.fixedHeader)
+        } else if (scrolled <= 300) {
+            headerElement.classList.remove(classes.fixedHeader)
+        }
+    };
+    window.addEventListener("scroll", toggleVisible);
+
     return (
-        <div className={classes.headerSection}>
+        <div className={classes.headerSection} id="header">
             <div className={classes.barWrap}>
                 <ul className={classes.headerBar}>
                     <li>About Us</li>
@@ -36,7 +50,7 @@ const Header = () => {
                 <div>Ad Print Delivered in High Quality</div>
             </div>
             <div className={classes.headerWrap}>
-                <img src={Logo} alt="logo" className={classes.logo} />
+                <Link to="/"><img src={Logo} alt="logo" className={classes.logo} /></Link>
                 <div>
                     <div>Mon. - Fri. 09:30 - 18:00 | Sat. 10:00 - 18:00</div>
                     <div className={classes.headerPhone}>020 7289 9000</div>

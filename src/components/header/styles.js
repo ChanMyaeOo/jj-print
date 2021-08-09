@@ -4,6 +4,14 @@ const useStyles = makeStyles((theme) => ({
     headerSection: {
         background: '#fff'
     },
+    fixedHeader: {
+        zIndex: '1400',
+        position: 'fixed',
+        top: 0,
+        width: '100%',
+        background: "#fff",
+        boxShadow: '2px 2px 2px rgba(0,0,0,0.5)'
+    },
     barWrap: {
         background: '#000',
         width: '100%',
@@ -90,9 +98,11 @@ const useStyles = makeStyles((theme) => ({
     flyerSubNav: {
         position: 'absolute',
         width: '170px',
-        background: '#f2f2f2',
+        background: '#fff',
         marginTop: '10px',
         display: 'none',
+        boxShadow: '2px 2px 2px rgba(0,0,0,0.5)',
+        padding: '10px 0',
         "& > div": {
             color: '#000',
             padding: '10px',
@@ -110,10 +120,12 @@ const useStyles = makeStyles((theme) => ({
     },
     productsNavWrap: {
         position: 'absolute',
-        background: '#f2f2f2',
+        background: '#fff',
         width: '1000px',
         marginTop: '10px',
-        display: 'none'
+        display: 'none',
+        padding: '20px 0',
+        boxShadow: '2px 2px 2px rgba(0,0,0,0.5)'
     },
     productsSubNav: {
         display: 'flex',
