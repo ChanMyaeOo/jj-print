@@ -2,7 +2,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
     headerSection: {
-        background: '#fff'
+        background: '#fff',
+        width: '100%',
+        maxWidth: '1280px'
     },
     fixedHeader: {
         zIndex: '1400',

@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
     priceSection: {
         display: 'flex',
         justifyContent: 'space-between',
+        alignItems: 'center',
         margin: '25px auto',
         width: '95%',
         "& > p": {
