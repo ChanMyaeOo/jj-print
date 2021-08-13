@@ -1,9 +1,16 @@
 import React from 'react'
 import useStyles from './styles'
-import StampsImg from '../../images/stamps.jpg'
+import { useStateValue } from '../../context/StateProvider'
 
 const CheckoutProduct = ({ id, title, image, color, price, size}) => {
     const classes = useStyles()
+    const [{basket}, dispatch] = useStateValue()
+    const removeFromBasket = () => {
+        dispatch({
+            type: "REMOVE_FROM_BASKET",
+            id,
+        });
+    };
     return (
         <div className={classes.checkoutProduct}>
             <img src={image} alt="checkout img" className={classes.cpImage}/>
@@ -13,7 +20,7 @@ const CheckoutProduct = ({ id, title, image, color, price, size}) => {
                 <p><strong>Color:</strong> {color}</p>
                 <p><strong>Size:</strong> {size}</p>
                 <p><strong>Price:</strong> £{price}</p>
-                <button>Remove from Basket</button>
+                <button onClick={removeFromBasket}>Remove from Basket</button>
             </div>
         </div>
     )

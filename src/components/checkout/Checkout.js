@@ -2,6 +2,7 @@ import React from 'react'
 import useStyles from './styles'
 import { useStateValue } from '../../context/StateProvider'
 import CheckoutProduct from '../checkout-product/CheckoutProduct'
+import Subtotal from '../subtotal/Subtotal'
 
 const Checkout = () => {
     const classes = useStyles()
@@ -27,8 +28,7 @@ const Checkout = () => {
             </div>
 
             <div className={classes.rightSide}>
-                <p>Subtotal (0 items): <strong>£0</strong></p>
-                <button>Proceed to Checkout</button>
+                <Subtotal />
             </div>
         </div>
     )
