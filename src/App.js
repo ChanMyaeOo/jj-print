@@ -8,6 +8,7 @@ import BCardsDetails from './pages/b-cards-details/BCardsDetails'
 import DFlyersDetails from './pages/d-flyers-details/DFlyersDetails'
 import StampsDetails from './pages/stamps-details/StampsDetails'
 import EnvelopesDetails from './pages/envelopes-details/EnvelopesDetails'
+import Checkout from './components/checkout/Checkout'
 import ScrollToTop from './utils/ScrollToTop'
 import "./style.css";
 
@@ -16,6 +17,13 @@ const App = () => {
         <Router>
             <ScrollToTop />
             <Switch>
+
+                <Route path="/checkout">
+                    <Layout>
+                        <Checkout />
+                    </Layout>
+                </Route>
+
                 <Route path="/envelopes-details">
                     <Layout>
                         <EnvelopesDetails />

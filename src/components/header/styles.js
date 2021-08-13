@@ -56,6 +56,12 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center'
     },
+    checkoutLink: {
+        textDecoration: 'none',
+        color: '#fff',
+        display: 'flex',
+        alignItems: 'center'
+    },
     logo: {
         width: '90px',
         height: '76px'

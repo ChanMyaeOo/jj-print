@@ -47,7 +47,7 @@ const Header = () => {
                     <li><FacebookIcon className={classes.sIcons} /> <InstagramIcon className={classes.sIcons}/> <TwitterIcon className={classes.sIcons}/></li>
                     <li>Login/Register</li>
                     <li className={classes.hdCheckout}>Checkout</li>
-                    <li className={classes.basketList}><ShoppingBasketIcon className={classes.basketIcon} />&nbsp;<span>{basket.length}</span></li>
+                    <li className={classes.basketList}><Link to="/checkout" className={classes.checkoutLink}><ShoppingBasketIcon className={classes.basketIcon} />&nbsp;<span>{basket.length}</span></Link></li>
                 </ul>
                 <div>Ad Print Delivered in High Quality</div>
             </div>
