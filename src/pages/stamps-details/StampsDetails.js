@@ -3,9 +3,35 @@ import { Grid } from '@material-ui/core'
 import useStyles from './styles'
 import StampsImg from '../../images/stamps.jpg'
 import Previews from "../../components/previews/Previews";
+import { useStateValue } from "../../context/StateProvider";
 
 const StampsDetails = () => {
     const classes = useStyles()
+    const [{ basket }, dispatch] = useStateValue();
+    const [price, setPrice] = useState(14.95)
+    const [color, setColor] = useState('black')
+    const [size, setSize] = useState('14x66mm')
+
+    const addToBasket = (e) => {
+        // dispatch item into the data layer
+        e.preventDefault()
+        dispatch({
+        type: "ADD_TO_BASKET",
+            item: {
+                id: '1000124',
+                title: 'Stamps',
+                image: StampsImg,
+                color,
+                price,
+                size
+            },
+        });
+    };
+
+    const handleChange = (e) => {
+        setColor(e.target.value)
+    }
+
     return (
         <div className={classes.stampsWrap}>
             <div className={classes.leftContainer}>
@@ -45,17 +71,17 @@ const StampsDetails = () => {
                 <form className={classes.formWrap}>
                     <div className={classes.colorSection}>
                         <div className={classes.formColor}>Color:</div>
-                        <select className={classes.selectWrap}>
-                            <option className={classes.selectOption}>
+                        <select className={classes.selectWrap} onChange={handleChange}>
+                            <option className={classes.selectOption} value="Black" >
                                 Black
                             </option>
-                            <option className={classes.selectOption}>
+                            <option className={classes.selectOption} value="Red">
                                 Red
                             </option>
-                            <option className={classes.selectOption}>
+                            <option className={classes.selectOption} value="Green">
                                 Green
                             </option>
-                            <option className={classes.selectOption}>
+                            <option className={classes.selectOption} value="Blue">
                                 Blue
                             </option>
                         </select>
@@ -72,47 +98,65 @@ const StampsDetails = () => {
                         <Grid item lg={8} md={8} sm={8} xs={8} className={classes.size}>
                             size 14x66mm
                         </Grid>
-                        <Grid item lg={4} md={4} sm={4} xs={4} className={classes.price}>
+                        <Grid item lg={4} md={4} sm={4} xs={4} className={classes.price} onClick={() => {
+                            setSize('14x66mm')
+                            setPrice(14.95)
+                        }}>
                             £14.95
                         </Grid>
 
                         <Grid item lg={8} md={8} sm={8} xs={8} className={classes.size}>
                             size 14x38mm
                         </Grid>
-                        <Grid item lg={4} md={4} sm={4} xs={4} className={classes.price}>
+                        <Grid item lg={4} md={4} sm={4} xs={4} className={classes.price} onClick={() => {
+                            setSize('14x38mm')
+                            setPrice(17.58)
+                        }}>
                             £17.58
                         </Grid>
 
                         <Grid item lg={8} md={8} sm={8} xs={8} className={classes.size}>
                             size 18x50mm
                         </Grid>
-                        <Grid item lg={4} md={4} sm={4} xs={4} className={classes.price}>
+                        <Grid item lg={4} md={4} sm={4} xs={4} className={classes.price} onClick={() => {
+                            setSize('18x50mm')
+                            setPrice(21.38)
+                        }}>
                             £21.38
                         </Grid>
 
                         <Grid item lg={8} md={8} sm={8} xs={8} className={classes.size}>
                             size 22x60mm
                         </Grid>
-                        <Grid item lg={4} md={4} sm={4} xs={4} className={classes.price}>
+                        <Grid item lg={4} md={4} sm={4} xs={4} className={classes.price} onClick={() => {
+                            setSize('22x60mm')
+                            setPrice(26.5)
+                        }}>
                             £26.56
                         </Grid>
 
                         <Grid item lg={8} md={8} sm={8} xs={8} className={classes.size}>
                             size 34x58mm
                         </Grid>
-                        <Grid item lg={4} md={4} sm={4} xs={4} className={classes.price}>
+                        <Grid item lg={4} md={4} sm={4} xs={4} className={classes.price} onClick={() => {
+                            setSize('34x58mm')
+                            setPrice(31.1)
+                        }}>
                             £31.1
                         </Grid>
 
                         <Grid item lg={8} md={8} sm={8} xs={8} className={classes.size}>
                             size 27x70mm
                         </Grid>
-                        <Grid item lg={4} md={4} sm={4} xs={4} className={classes.price}>
+                        <Grid item lg={4} md={4} sm={4} xs={4} className={classes.price} onClick={() => {
+                            setSize('27x70mm')
+                            setPrice(32.18)
+                        }}>
                             £32.18
                         </Grid>
                     </Grid>
 
-                    <button type="submit" className={classes.cardBtn}>
+                    <button className={classes.cardBtn} onClick={addToBasket}>
                         Add to Card
                     </button>
                 </form>

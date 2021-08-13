@@ -3,8 +3,11 @@ import { Grid } from "@material-ui/core";
 import useStyles from "./styles";
 import TShirtImg from "../../images/t-shirt.jpg";
 import Previews from "../../components/previews/Previews";
+import { useStateValue } from "../../context/StateProvider";
 
 const TShirtDetails = () => {
+    const [{ basket }, dispatch] = useStateValue();
+    console.log('Basket ==>' ,basket)
     const classes = useStyles();
     const handleSubmit = () => {};
     return (

@@ -9,9 +9,11 @@ import CloseIcon from '@material-ui/icons/Close';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import useStyles from "./styles";
 import Logo from '../../images/logo.png'
+import { useStateValue } from "../../context/StateProvider";
 
 const Header = () => {
     const classes = useStyles();
+    const [{ basket, user }, dispatch] = useStateValue();
 
     const handleOverlayClose = () => {
         const overlay = document.getElementById('overlay')
@@ -45,7 +47,7 @@ const Header = () => {
                     <li><FacebookIcon className={classes.sIcons} /> <InstagramIcon className={classes.sIcons}/> <TwitterIcon className={classes.sIcons}/></li>
                     <li>Login/Register</li>
                     <li className={classes.hdCheckout}>Checkout</li>
-                    <li className={classes.basketList}><ShoppingBasketIcon className={classes.basketIcon} />&nbsp;<span>0</span></li>
+                    <li className={classes.basketList}><ShoppingBasketIcon className={classes.basketIcon} />&nbsp;<span>{basket.length}</span></li>
                 </ul>
                 <div>Ad Print Delivered in High Quality</div>
             </div>
