@@ -35,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
             padding: '9px 15px'
         }
     },
+    headerGuest: {
+        fontSize: '12px'
+    },
     hdMailIcon: {
         fontSize: '18px'
     },

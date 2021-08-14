@@ -45,7 +45,7 @@ const Header = () => {
                     <li>Contact Us</li>
                     <li><MailOutlineIcon className={classes.hdMailIcon}/></li>
                     <li><FacebookIcon className={classes.sIcons} /> <InstagramIcon className={classes.sIcons}/> <TwitterIcon className={classes.sIcons}/></li>
-                    <li>Login/Register</li>
+                    <li><span className={classes.headerGuest}>Hello Guest</span> <br/>Sign In</li>
                     <li className={classes.hdCheckout}>Checkout</li>
                     <li className={classes.basketList}><Link to="/checkout" className={classes.checkoutLink}><ShoppingBasketIcon className={classes.basketIcon} />&nbsp;<span>{basket.length}</span></Link></li>
                 </ul>
