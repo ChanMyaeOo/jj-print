@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     cpContent: {
         marginLeft: '25px',
         "& > h3": {
-            fontSize: '30px',
+            fontSize: '24px',
             marginBottom: '10px'
         },
         "& > p": {

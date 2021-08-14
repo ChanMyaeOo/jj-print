@@ -10,13 +10,26 @@ import StampsDetails from './pages/stamps-details/StampsDetails'
 import EnvelopesDetails from './pages/envelopes-details/EnvelopesDetails'
 import Checkout from './components/checkout/Checkout'
 import ScrollToTop from './utils/ScrollToTop'
+import Payment from './components/payment/Payment'
 import "./style.css";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+const promise = loadStripe("pk_test_51JOFCUEi9v2WiQ6ftFZzfcvD2sNeld6MvmXwL217qJJBBXWcbr58blHqNhdG6yU4EbvR6TQfIAPlaNHSfFiSZQ3500l1NdFw1D");
 
 const App = () => {
     return (
         <Router>
             <ScrollToTop />
             <Switch>
+
+                <Route path="/payment">
+                    <Layout>
+                        <Elements stripe={promise}>
+                            <Payment />
+                        </Elements>
+                    </Layout>
+                </Route>
 
                 <Route path="/checkout">
                     <Layout>
