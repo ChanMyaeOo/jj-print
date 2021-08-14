@@ -8,7 +8,7 @@ import useStyles from './styles'
 const Subtotal = () => {
     const classes = useStyles()
     const history = useHistory()
-    const [{basket}, dispatch] = useStateValue()
+    const [{basket, user}, dispatch] = useStateValue()
     return (
         <div className={classes.subtotal}>
              <CurrencyFormat
@@ -25,7 +25,13 @@ const Subtotal = () => {
                 thousandSeperator={true}
                 prefix={"£"}
             />
-            <button onClick={(e) => history.push("/payment")}>
+            {/* <button onClick={(e) => history.push("/payment")} disabled={basket.length === 0}>
+                Proceed to Checkout
+            </button> */}
+
+            <button onClick={(e) => {
+                user ? history.push("/payment") : history.push("/sign-in")
+            }} disabled={basket.length === 0}>
                 Proceed to Checkout
             </button>
         </div>

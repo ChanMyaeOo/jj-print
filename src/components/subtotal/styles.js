@@ -10,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
             padding: '5px',
             border: 'none',
             marginTop: '20px',
-            fontSize: '16px'
+            fontSize: '16px',
+            cursor: 'pointer'
         }
     }
 }));

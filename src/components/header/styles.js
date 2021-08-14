@@ -38,6 +38,10 @@ const useStyles = makeStyles((theme) => ({
     headerGuest: {
         fontSize: '12px'
     },
+    signInLink: {
+        color: '#fff',
+        textDecoration: 'none',
+    },
     hdMailIcon: {
         fontSize: '18px'
     },
