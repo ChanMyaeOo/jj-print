@@ -2,7 +2,7 @@ import React from 'react'
 import useStyles from './styles'
 import { useStateValue } from '../../context/StateProvider'
 
-const CheckoutProduct = ({ id, title, image, color, price, size, quantity, mugType, trimming, sides, lamination, soc, lam}) => {
+const CheckoutProduct = ({ id, title, image, color, price, size, quantity, mugType, trimming, sides, lamination, soc, lam, dot, paper}) => {
     const classes = useStyles()
     const [{basket}, dispatch] = useStateValue()
     const removeFromBasket = () => {
@@ -90,6 +90,24 @@ const CheckoutProduct = ({ id, title, image, color, price, size, quantity, mugTy
                         null
                     )
                 }
+
+                {
+                    dot ? (
+                        <p><strong>Digital or Litho:</strong> {dot}</p>
+                    ) : (
+                        null
+                    )
+                }
+
+                {
+                    paper ? (
+                        <p><strong>Paper:</strong> {paper}</p>
+                    ) : (
+                        null
+                    )
+                }
+
+                
 
                 
                 

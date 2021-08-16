@@ -29,6 +29,8 @@ const Checkout = () => {
                             lamination={item.lamination}
                             soc={item.soc}
                             lam={item.lam}
+                            dot={item.dot}
+                            paper={item.paper}
                         />
                     ))
                 }

@@ -112,7 +112,8 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '18px',
         fontWeight: 'bold',
         border: 'none',
-        outline: 'none'
+        outline: 'none',
+        cursor: 'pointer'
     },
 
     [theme.breakpoints.down('md')]: {

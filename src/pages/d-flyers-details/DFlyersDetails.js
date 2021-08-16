@@ -1,11 +1,39 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Grid } from '@material-ui/core'
 import useStyles from './styles'
 import DFlyerImg from "../../images/d-flyers.jpeg";
 import Previews from "../../components/previews/Previews";
+import { useStateValue } from "../../context/StateProvider";
 
 const DFlyersDetails = () => {
     const classes = useStyles()
+    const [{ basket }, dispatch] = useStateValue();
+    const [sides, setSides] = useState('1 Side')
+    const [dot, setDot] = useState('Digital Printing')
+    const [paper, setPaper] = useState('150gsm Gloss')
+    const [quantity, setQuantity] = useState(25)
+    const [size, setSize] = useState('A6')
+    const [price, setPrice] = useState(35)
+
+    const addToBasket = (e) => {
+        // dispatch item into the data layer
+        e.preventDefault()
+        dispatch({
+        type: "ADD_TO_BASKET",
+            item: {
+                id: '1000125',
+                title: 'Digital Flyers',
+                image: DFlyerImg,
+                price,
+                size,
+                sides,
+                dot,
+                paper,
+                quantity
+            },
+        });
+    };
+
     return (
         <div className={classes.dFlyerWrap}>
             <div className={classes.leftContainer}>
@@ -36,17 +64,19 @@ const DFlyersDetails = () => {
 
                  <div className={classes.priceSection}>
                     <p>Price:</p>
-                    <div>£20</div>
+                    <div>£35</div>
                 </div>
 
                 <form className={classes.formWrap}>
                     <div className={classes.colorSection}>
                         <div className={classes.formColor}>Printed Sides</div>
-                        <select className={classes.selectWrap}>
-                            <option className={classes.selectOption}>
+                        <select className={classes.selectWrap} onChange={(e) => {
+                            setSides(e.target.value)
+                        }}>
+                            <option className={classes.selectOption} value="1 Side">
                                 1 Side
                             </option>
-                            <option className={classes.selectOption}>
+                            <option className={classes.selectOption} value="2 Sided">
                                 2 Sided
                             </option>
                         </select>
@@ -54,20 +84,24 @@ const DFlyersDetails = () => {
 
                     <div className={classes.colorSection}>
                         <div className={classes.formColor}>Digital or Litho</div>
-                        <select className={classes.selectWrap}>
-                            <option className={classes.selectOption}>
+                        <select className={classes.selectWrap} onChange={(e) => {
+                            setDot(e.target.value)
+                        }}>
+                            <option className={classes.selectOption} value="Digital Printing">
                                 Digital Printing
                             </option>
                         </select>
                     </div>
 
-                     <div className={classes.colorSection}>
+                    <div className={classes.colorSection}>
                         <div className={classes.formColor}>Paper</div>
-                        <select className={classes.selectWrap}>
-                            <option className={classes.selectOption}>
+                        <select className={classes.selectWrap} onChange={(e) => {
+                            setPaper(e.target.value)
+                        }}>
+                            <option className={classes.selectOption} value="150gsm Gloss">
                                 150gsm Gloss
                             </option>
-                            <option className={classes.selectOption}>
+                            <option className={classes.selectOption} value="170gsm Silk">
                                 170gsm Silk
                             </option>
                         </select>
@@ -96,82 +130,202 @@ const DFlyersDetails = () => {
                         <Grid item lg={2} md={2} sm={2} xs={2} className={classes.quantity}>
                             25
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(25)
+                                setSize('A6')
+                                setPrice(35)
+                            }}
+                        >
                             £35
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(25)
+                                setSize('DL')
+                                setPrice(41)
+                            }}
+                        >
                             £41
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(25)
+                                setSize('A5')
+                                setPrice(46)
+                            }}
+                        >
                             £46
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(25)
+                                setSize('A4')
+                                setPrice(49)
+                            }}
+                        >
                             £49
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(25)
+                                setSize('A3')
+                                setPrice(59)
+                            }}
+                        >
                             £59
                         </Grid>
 
                         <Grid item lg={2} md={2} sm={2} xs={2} className={classes.quantity}>
                             50
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(50)
+                                setSize('A6')
+                                setPrice(40)
+                            }}
+                        >
                             £40
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(50)
+                                setSize('DL')
+                                setPrice(43)
+                            }}
+                        >
                             £43
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(50)
+                                setSize('A5')
+                                setPrice(50)
+                            }}
+                        >
                             £50
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(50)
+                                setSize('A4')
+                                setPrice(59)
+                            }}
+                        >
                             £59
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(50)
+                                setSize('A3')
+                                setPrice(72)
+                            }}
+                        >
                             £72
                         </Grid>
 
                          <Grid item lg={2} md={2} sm={2} xs={2} className={classes.quantity}>
                             100
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(100)
+                                setSize('A6')
+                                setPrice(45)
+                            }}
+                        >
                             £45
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(100)
+                                setSize('DL')
+                                setPrice(48)
+                            }}
+                        >
                             £48
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(100)
+                                setSize('A5')
+                                setPrice(59)
+                            }}
+                        >
                             £59
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(100)
+                                setSize('A4')
+                                setPrice(75)
+                            }}
+                        >
                             £75
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(100)
+                                setSize('A3')
+                                setPrice(99)
+                            }}
+                        >
                             £99
                         </Grid>
 
                          <Grid item lg={2} md={2} sm={2} xs={2} className={classes.quantity}>
                             250
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(250)
+                                setSize('A6')
+                                setPrice(50)
+                            }}
+                        >
                             £50
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(250)
+                                setSize('DL')
+                                setPrice(56)
+                            }}
+                        >
                             £56
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(250)
+                                setSize('A5')
+                                setPrice(69)
+                            }}
+                        >
                             £69
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(250)
+                                setSize('A4')
+                                setPrice(90)
+                            }}
+                        >
                             £90
                         </Grid>
-                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}>
+                        <Grid item lg={2} md={2} sm={2} xs={2} className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity(250)
+                                setSize('A3')
+                                setPrice(169)
+                            }}
+                        >
                             £169
                         </Grid>
                     </Grid>
                     
 
-                    <button type="submit" className={classes.cardBtn}>
+                    <button type="submit" className={classes.cardBtn} onClick={addToBasket}>
                         Add to Card
                     </button>
                 </form>
