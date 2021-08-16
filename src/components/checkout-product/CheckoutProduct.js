@@ -2,7 +2,7 @@ import React from 'react'
 import useStyles from './styles'
 import { useStateValue } from '../../context/StateProvider'
 
-const CheckoutProduct = ({ id, title, image, color, price, size, quantity, mugType}) => {
+const CheckoutProduct = ({ id, title, image, color, price, size, quantity, mugType, trimming, sides, lamination, soc, lam}) => {
     const classes = useStyles()
     const [{basket}, dispatch] = useStateValue()
     const removeFromBasket = () => {
@@ -17,7 +17,14 @@ const CheckoutProduct = ({ id, title, image, color, price, size, quantity, mugTy
 
             <div className={classes.cpContent}>
                 <h3>{title}</h3>
-                <p><strong>Color:</strong> {color}</p>
+
+                {
+                    color ? (
+                        <p><strong>Color:</strong> {color}</p>
+                    ) : (
+                        null
+                    )
+                }
                 
 
                 {
@@ -43,6 +50,48 @@ const CheckoutProduct = ({ id, title, image, color, price, size, quantity, mugTy
                         null
                     )
                 }
+
+                {
+                    trimming ? (
+                        <p><strong>Trimming:</strong> {trimming}</p>
+                    ) : (
+                        null
+                    )
+                }
+
+                {
+                    sides ? (
+                        <p><strong>Sides:</strong> {sides}</p>
+                    ) : (
+                        null
+                    )
+                }
+
+                {
+                    lamination ? (
+                        <p><strong>Lamination:</strong> {lamination}</p>
+                    ) : (
+                        null
+                    )
+                }
+
+                {
+                    soc ? (
+                        <p><strong>Standard or Customised:</strong> {soc}</p>
+                    ) : (
+                        null
+                    )
+                }
+
+                {
+                    lam ? (
+                        <p><strong>LAM:</strong> {lam}</p>
+                    ) : (
+                        null
+                    )
+                }
+
+                
                 
                 <p><strong>Price:</strong> £{price}</p>
                 <button onClick={removeFromBasket}>Remove from Basket</button>

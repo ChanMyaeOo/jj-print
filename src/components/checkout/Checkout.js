@@ -24,6 +24,11 @@ const Checkout = () => {
                             price={item.price}
                             quantity={item.quantity}
                             mugType={item.mugType}
+                            trimming={item.trimming}
+                            sides={item.sides}
+                            lamination={item.lamination}
+                            soc={item.soc}
+                            lam={item.lam}
                         />
                     ))
                 }

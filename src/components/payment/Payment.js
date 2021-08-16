@@ -6,7 +6,7 @@ import useStyles from "./styles";
 import { useStateValue } from "../../context/StateProvider";
 import CheckoutProduct from "../checkout-product/CheckoutProduct";
 import { getBasketTotal } from "../../context/Reducer";
-import axios from '../../axios/Axios'
+import axios from "../../axios/Axios";
 
 const Payment = () => {
     const classes = useStyles();
@@ -57,6 +57,11 @@ const Payment = () => {
                         price={item.price}
                         quantity={item.quantity}
                         mugType={item.mugType}
+                        trimming={item.trimming}
+                        sides={item.sides}
+                        lamination={item.lamination}
+                        soc={item.soc}
+                        lam={item.lam}
                     />
                 ))}
             </div>
