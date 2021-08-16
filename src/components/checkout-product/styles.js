@@ -27,6 +27,16 @@ const useStyles = makeStyles((theme) => ({
             outline: 'none',
             fontSize: '15px'
         }
+    },
+    [theme.breakpoints.down('xs')]: {
+        checkoutProduct: {
+            flexDirection: 'column',
+            marginTop: '60px'
+        },
+        cpContent: {
+            marginLeft: 0,
+            marginTop: '20px'
+        }
     }
 }));
 export default useStyles;

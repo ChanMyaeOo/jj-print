@@ -30,6 +30,26 @@ const useStyles = makeStyles((theme) => ({
             marginTop: '20px',
             fontSize: '16px'
         }
+    },
+    [theme.breakpoints.down('sm')]: {
+        checkout: {
+            flexDirection: 'column'
+        },
+        rightSide: {
+            width: '50%',
+            margin: '0 auto',
+            marginBottom: '30px'
+        }
+    },
+
+    [theme.breakpoints.down('xs')]: {
+        leftSide: {
+            marginLeft: 0,
+            paddingLeft: '15px'
+        },
+        rightSide: {
+            width: '80%'
+        }
     }
 }));
 export default useStyles;

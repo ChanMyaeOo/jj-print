@@ -13,6 +13,6 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '16px',
             cursor: 'pointer'
         }
-    }
+    },
 }));
 export default useStyles;
