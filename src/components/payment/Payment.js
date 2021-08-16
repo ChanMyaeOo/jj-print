@@ -55,6 +55,8 @@ const Payment = () => {
                         color={item.color}
                         size={item.size}
                         price={item.price}
+                        quantity={item.quantity}
+                        mugType={item.mugType}
                     />
                 ))}
             </div>

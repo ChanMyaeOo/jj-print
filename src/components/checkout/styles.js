@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme) => ({
         flex: '0.8',
         marginLeft: '30px',
         "& > h3": {
-            marginBottom: '25px'
+            marginBottom: '25px',
+            marginTop: '10px'
         }
     },
     rightSide: {

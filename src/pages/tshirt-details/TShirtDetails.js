@@ -5,11 +5,37 @@ import TShirtImg from "../../images/t-shirt.jpg";
 import Previews from "../../components/previews/Previews";
 import { useStateValue } from "../../context/StateProvider";
 
+
 const TShirtDetails = () => {
     const [{ basket }, dispatch] = useStateValue();
     console.log('Basket ==>' ,basket)
     const classes = useStyles();
     const handleSubmit = () => {};
+    const [price, setPrice] = useState(6.9)
+    const [color, setColor] = useState('white')
+    const [size, setSize] = useState('Single Side')
+    const [quantity, setQuantity] = useState('1')
+
+    const addToBasket = (e) => {
+        // dispatch item into the data layer
+        e.preventDefault()
+        dispatch({
+        type: "ADD_TO_BASKET",
+            item: {
+                id: '1000121',
+                title: 'T-Shirts',
+                image: TShirtImg,
+                color,
+                price,
+                size,
+                quantity
+            },
+        });
+    };
+
+    const handleChange = (e) => {
+        setColor(e.target.value)
+    }
     return (
         <div className={classes.tShirtWrap}>
             <div className={classes.leftContainer}>
@@ -55,11 +81,11 @@ const TShirtDetails = () => {
                 <form onSubmit={handleSubmit} className={classes.formWrap}>
                     <div className={classes.colorSection}>
                         <div className={classes.formColor}>Color:</div>
-                        <select className={classes.selectWrap}>
-                            <option className={classes.selectOption}>
+                        <select className={classes.selectWrap} onChange={handleChange}>
+                            <option className={classes.selectOption} value="White">
                                 White
                             </option>
-                            <option className={classes.selectOption}>
+                            <option className={classes.selectOption} value="Dark">
                                 Dark
                             </option>
                         </select>
@@ -112,6 +138,11 @@ const TShirtDetails = () => {
                             sm={5}
                             xs={5}
                             className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity('1')
+                                setPrice(14)
+                                setSize('Single Side')
+                            }}
                         >
                             £14
                         </Grid>
@@ -122,6 +153,11 @@ const TShirtDetails = () => {
                             sm={5}
                             xs={5}
                             className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity('1')
+                                setPrice(19)
+                                setSize('Double Side')
+                            }}
                         >
                             £19
                         </Grid>
@@ -143,6 +179,11 @@ const TShirtDetails = () => {
                             sm={5}
                             xs={5}
                             className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity('10-20')
+                                setPrice(8.9)
+                                setSize('Single Side')
+                            }}
                         >
                             £8.90
                         </Grid>
@@ -153,6 +194,11 @@ const TShirtDetails = () => {
                             sm={5}
                             xs={5}
                             className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity('10-20')
+                                setPrice(12.9)
+                                setSize('Double Side')
+                            }}
                         >
                             £12.90
                         </Grid>
@@ -174,6 +220,11 @@ const TShirtDetails = () => {
                             sm={5}
                             xs={5}
                             className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity('21-49')
+                                setPrice(7.9)
+                                setSize('Single Side')
+                            }}
                         >
                             £7.90
                         </Grid>
@@ -184,6 +235,11 @@ const TShirtDetails = () => {
                             sm={5}
                             xs={5}
                             className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity('21-49')
+                                setPrice(11)
+                                setSize('Double Side')
+                            }}
                         >
                             £11
                         </Grid>
@@ -205,6 +261,11 @@ const TShirtDetails = () => {
                             sm={5}
                             xs={5}
                             className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity('50+')
+                                setPrice(6.9)
+                                setSize('Single Side')
+                            }}
                         >
                             £6.90
                         </Grid>
@@ -215,12 +276,17 @@ const TShirtDetails = () => {
                             sm={5}
                             xs={5}
                             className={classes.qtyPrice}
+                            onClick={() => {
+                                setQuantity('50+')
+                                setPrice(9.9)
+                                setSize('Double Side')
+                            }}
                         >
                             £9.90
                         </Grid>
                     </Grid>
 
-                    <button type="submit" className={classes.cardBtn}>
+                    <button type="submit" className={classes.cardBtn} onClick={addToBasket}>
                         Add to Card
                     </button>
                 </form>

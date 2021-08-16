@@ -6,11 +6,11 @@ import Subtotal from '../subtotal/Subtotal'
 
 const Checkout = () => {
     const classes = useStyles()
-    const [{basket}, dispatch] = useStateValue()
+    const [{basket, user}, dispatch] = useStateValue()
     return (
         <div className={classes.checkout}>
             <div className={classes.leftSide}>
-                <p>Hello Guest</p>
+                <p>Hello {user ? `${user.email},` : 'Guest,'}</p>
                 <h3>Your Shopping Basket</h3>
 
                 {
@@ -22,6 +22,8 @@ const Checkout = () => {
                             color={item.color}
                             size={item.size}
                             price={item.price}
+                            quantity={item.quantity}
+                            mugType={item.mugType}
                         />
                     ))
                 }
