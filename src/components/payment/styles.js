@@ -92,6 +92,12 @@ const useStyles = makeStyles((theme) => ({
                 opacity: '0.8',
             }
         }
+    },
+
+    [theme.breakpoints.down('xs')]: {
+        form: {
+            width: '95%'
+        }
     }
 }));
 export default useStyles;
