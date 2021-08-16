@@ -31,6 +31,7 @@ const Checkout = () => {
                             lam={item.lam}
                             dot={item.dot}
                             paper={item.paper}
+                            options={item.options}
                         />
                     ))
                 }
