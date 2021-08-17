@@ -59,7 +59,36 @@ const useStyles = makeStyles((theme) => ({
         margin: '5px',
         textTransform: 'uppercase',
         fontSize: '85%',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        "& > a": {
+            textDecoration: 'none',
+            color: '#fff'
+        }
+    },
+    hdSubLink: {
+        textDecoration: 'none',
+        color: '#000',
+        "&:hover": {
+            color: '#27aabb',
+            fontWeight: 'bold'
+        }
+    },
+    hdNavLink: {
+        color: '#fff',
+        textDecoration: 'none',
+        "&:hover": {
+            fontWeight: 'bold'
+        }
+    },
+    navLondonBook: {
+        background: '#27aabb',
+        "& > a": {
+            color: '#fff',
+            display: 'block',
+            padding: '0 5px',
+            textDecoration: 'none',
+            fontSize: '15px',
+        }
     },
     basketIcon: {
         fontSize: '18px'

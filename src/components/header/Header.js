@@ -69,7 +69,7 @@ const Header = () => {
                             </div>
                         </Link>
                     </li>
-                    <li className={classes.hdCheckout}>Checkout</li>
+                    <li className={classes.hdCheckout}><Link to="/checkout">Checkout</Link></li>
                     <li className={classes.basketList}>
                         <Link to="/checkout" className={classes.checkoutLink}>
                             <ShoppingBasketIcon
@@ -101,65 +101,65 @@ const Header = () => {
                                     <h4 className={classes.subHeader}>
                                         advertising materials
                                     </h4>
-                                    <div>Business Cards</div>
-                                    <div>Digital Flyers</div>
-                                    <div>Litho Flyers</div>
-                                    <div>Promotional Items</div>
+                                    <div><Link to="/business-cards-details" className={classes.hdSubLink}>Business Cards</Link></div>
+                                    <div><Link to="/digital-flyers-details" className={classes.hdSubLink}>Digital Flyers</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Litho Flyers</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Promotional Items</Link></div>
                                 </li>
                                 <li>
                                     <h4 className={classes.subHeader}>
                                         business/personal stationery
                                     </h4>
-                                    <div>Calenders</div>
-                                    <div>Complient Slips</div>
-                                    <div>Envelopes</div>
-                                    <div>Folders</div>
-                                    <div>Invoice Books</div>
-                                    <div>Labels/Stickers</div>
-                                    <div>Letterheads</div>
-                                    <div>Notepads</div>
-                                    <div>Stamps</div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Calenders</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Complient Slips</Link></div>
+                                    <div><Link to="/envelopes-details" className={classes.hdSubLink}>Envelopes</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Folders</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Invoice Books</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Labels/Stickers</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Letterheads</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Notepads</Link></div>
+                                    <div><Link to="/stamps-details" className={classes.hdSubLink}>Stamps</Link></div>
                                 </li>
                                 <li>
                                     <h4 className={classes.subHeader}>
                                         advertising products
                                     </h4>
-                                    <div>Brochures &amp; Magazines</div>
-                                    <div>Foil Press</div>
-                                    <div>Posters</div>
-                                    <div>Books</div>
-                                    <div>Hard Cover Menu</div>
-                                    <div>Lether Cover Menu</div>
-                                    <div>Paper Menu</div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Brochures &amp; Magazines</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Foil Press</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Posters</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Books</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Hard Cover Menu</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Lether Cover Menu</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Paper Menu</Link></div>
                                 </li>
                                 <li>
                                     <h4 className={classes.subHeader}>
                                         customized items
                                     </h4>
-                                    <div>Awards &amp; Trophies</div>
-                                    <div>Roller Banners</div>
-                                    <div>Canvas &amp; Framed Print</div>
-                                    <div>Mugs</div>
-                                    <div>T-shirts</div>
-                                    <div>Vinyl</div>
-                                    <div>Wedding Cards</div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Awards &amp; Trophies</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Roller Banners</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Canvas &amp; Framed Print</Link></div>
+                                    <div><Link to="/mugs-details" className={classes.hdSubLink}>Mugs</Link></div>
+                                    <div><Link to="/t-shirt-details" className={classes.hdSubLink}>T-shirts</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Vinyl</Link></div>
+                                    <div><Link to="/" className={classes.hdSubLink}>Wedding Cards</Link></div>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li>business cards</li>
+                    <li><Link className={classes.hdNavLink} to="/business-cards-details">business cards</Link></li>
                     <li className={classes.flyer}>
                         flyers
                         <div className={classes.flyerSubNav}>
-                            <div>Litho Flyers</div>
-                            <div>Digital Flyers</div>
+                            <div><Link to="/" className={classes.hdSubLink}>Litho Flyers</Link></div>
+                            <div><Link to="/digital-flyers-details" className={classes.hdSubLink}>Digital Flyers</Link></div>
                         </div>
                     </li>
-                    <li>envelopes</li>
-                    <li>invoice books</li>
-                    <li>stamps</li>
-                    <li>roller banners</li>
-                    <li>london book</li>
+                    <li><Link to="envelopes-details" className={classes.hdNavLink}>envelopes</Link></li>
+                    <li><Link to="/stamps-details" className={classes.hdNavLink}>stamps</Link></li>
+                    <li><Link to="/mugs-details" className={classes.hdNavLink}>mugs</Link></li>
+                    <li><Link to="/t-shirt-details" className={classes.hdNavLink}>t-shirts</Link></li>
+                    <li className={classes.navLondonBook}><a href="https://www.londonbook.uk/" target="_blank">london book</a></li>
                 </ul>
             </div>
 
