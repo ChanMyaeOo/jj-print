@@ -35,6 +35,11 @@ const useStyles = makeStyles((theme) => ({
             padding: '9px 15px'
         }
     },
+
+    hdLinks: {
+        color: '#fff',
+        textDecoration: 'none',
+    },
     headerGuest: {
         fontSize: '12px'
     },

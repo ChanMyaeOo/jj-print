@@ -50,11 +50,9 @@ const Header = () => {
         <div className={classes.headerSection} id="header">
             <div className={classes.barWrap}>
                 <ul className={classes.headerBar}>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>
-                        <MailOutlineIcon className={classes.hdMailIcon} />
-                    </li>
+                    <li><Link to="/about" className={classes.hdLinks}>About Us</Link></li>
+                    <li><Link to="/contact" className={classes.hdLinks}>Contact Us</Link></li>
+
                     <li>
                         <FacebookIcon className={classes.sIcons} />{" "}
                         <InstagramIcon className={classes.sIcons} />{" "}
