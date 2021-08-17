@@ -37,9 +37,12 @@ const useStyles = makeStyles((theme) => ({
     },
     orderBtn: {
         background: '#008b8b',
-        color: '#f2f2f2',
         padding: '10px',
         textTransform: 'uppercase',
+        "& > a": {
+            textDecoration: 'none',
+            color: '#f2f2f2',
+        }
     },
     [theme.breakpoints.down('md')]: {
         itemWrap: {

@@ -20,7 +20,7 @@ const Previews = () => {
                     <PreviewItem imgUrl={DFlyersImg} altText="digital flyers img" title="Digital Flyers" price="£35" details="digital-flyers-details"/>
                 </Grid>
 
-                 <Grid item lg={6} md={6} sm={6} className={classes.previewItemWrap}>
+                <Grid item lg={6} md={6} sm={6} className={classes.previewItemWrap}>
                     <PreviewItem imgUrl={EnvelopesImg} altText="envelopes img" title="Envelopes" price="£99" details="envelopes-details"/>
                 </Grid>
 

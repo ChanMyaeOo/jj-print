@@ -22,7 +22,7 @@ const Item = ({ imgUrl, altText, title, content, price, details }) => {
               </div>
 
               <div className={classes.orderBtn}>
-                  Order now
+                  <Link to={`/${details}`}>Order now</Link>
               </div>
           </div>
         </div>
