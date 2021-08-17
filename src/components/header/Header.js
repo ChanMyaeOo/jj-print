@@ -159,7 +159,6 @@ const Header = () => {
                     <li><Link to="/stamps-details" className={classes.hdNavLink}>stamps</Link></li>
                     <li><Link to="/mugs-details" className={classes.hdNavLink}>mugs</Link></li>
                     <li><Link to="/t-shirt-details" className={classes.hdNavLink}>t-shirts</Link></li>
-                    <li className={classes.navLondonBook}><a href="https://www.londonbook.uk/" target="_blank">london book</a></li>
                 </ul>
             </div>
 
@@ -167,10 +166,12 @@ const Header = () => {
             <div className={classes.resHeaderWrap}>
                 <div className={classes.resHeader}>
                     <MenuIcon onClick={handleOverlayOpen} />
-                    <img src={Logo} alt="logo" className={classes.resLogo} />
+                    <Link to="/"><img src={Logo} alt="logo" className={classes.resLogo} /></Link>
                     <div className={classes.smBasketWrap}>
-                        <ShoppingBasketIcon />
-                        &nbsp;<span>0</span>
+                        <Link to="/checkout">
+                            <ShoppingBasketIcon />
+                            &nbsp;<span>{basket.length}</span>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -181,32 +182,34 @@ const Header = () => {
                     onClick={handleOverlayClose}
                 />
                 <div className={classes.sideBar}>
+                    <Link to="/">
                     <img
                         src={Logo}
                         alt="logo"
                         className={classes.sideBarLogo}
                     />
+                    </Link>
 
                     <ul className={classes.sidebarNav}>
                         <li className={classes.sideBarProducts}>
                             All products
                             <div className={classes.productsWrap}>
                                 <h5>advertising materials</h5>
-                                <div>Business Cards</div>
-                                <div>Digital Flyers</div>
+                                <div><Link to="business-cards-details" className={classes.resHeaderLink}>Business Cards</Link></div>
+                                <div><Link to="digital-flyers-details" className={classes.resHeaderLink}>Digital Flyers</Link></div>
                                 <div>Litho Flyers</div>
                                 <div>Promotional Items</div>
 
                                 <h5>business/personal stationery</h5>
                                 <div>Calenders</div>
                                 <div>Complient Slips</div>
-                                <div>Envelopes</div>
+                                <div><Link to="envelopes-details" className={classes.resHeaderLink}>Envelopes</Link></div>
                                 <div>Folders</div>
                                 <div>Invoice Books</div>
                                 <div>Labels/Stickers</div>
                                 <div>Letterheads</div>
                                 <div>Notepads</div>
-                                <div>Stamps</div>
+                                <div><Link to="stamps-details" className={classes.resHeaderLink}>Stamps</Link></div>
 
                                 <h5>advertising products</h5>
                                 <div>Brochures &amp; Magazines</div>
@@ -221,25 +224,24 @@ const Header = () => {
                                 <div>Awards &amp; Trophies</div>
                                 <div>Roller Banners</div>
                                 <div>Canvas &amp; Framed Print</div>
-                                <div>Mugs</div>
-                                <div>T-shirts</div>
+                                <div><Link to="mugs-details" className={classes.resHeaderLink}>Mugs</Link></div>
+                                <div><Link to="t-shirt-details" className={classes.resHeaderLink}>T-shirts</Link></div>
                                 <div>Vinyl</div>
                                 <div>Wedding Cards</div>
                             </div>
                         </li>
-                        <li>business cards</li>
+                        <li><Link to="/business-cards-details" className={classes.resNavLink}>business cards</Link></li>
                         <li className={classes.sideBarFlyers}>
                             flyers
                             <div className={classes.sideBarSubFlyers}>
                                 <div>Litho Flyers</div>
-                                <div>Digital Flyers</div>
+                                <div><Link to="/digital-flyers-details" className={classes.resHeaderLink}>Digital Flyers</Link></div>
                             </div>
                         </li>
-                        <li>envelopes</li>
-                        <li>invoice books</li>
-                        <li>stamps</li>
-                        <li>roller banners</li>
-                        <li>london book</li>
+                        <li><Link to="/envelopes-details" className={classes.resNavLink}>envelopes</Link></li>
+                        <li><Link to="/stamps-details" className={classes.resNavLink}>stamps</Link></li>
+                        <li><Link to="/mugs-details" className={classes.resNavLink}>mugs</Link></li>
+                        <li><Link to="/t-shirt-details" className={classes.resNavLink}>t-shirts</Link></li>
                     </ul>
 
                     <div className={classes.sidebarSocial}>

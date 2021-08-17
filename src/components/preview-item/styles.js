@@ -31,12 +31,15 @@ const useStyles = makeStyles((theme) => ({
         previewItemWrap: {
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center'
+            alignItems: 'center',
+            paddingBottom: '30px',
+            borderBottom: '1px solid #ddd',
+            paddingTop: '30px'
         },
-        leatherCoverImg: {
+        previewImg: {
             width: '60%',
-            // display: 'block',
-            // margin: '0 auto'
+            display: 'block',
+            margin: '0 auto'
         }
     }
 }));

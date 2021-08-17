@@ -206,6 +206,13 @@ const useStyles = makeStyles((theme) => ({
         padding: '0 15px',
         borderBottom: '1px solid #ddd'
     },
+    resHeaderLink: {
+        color: '#666'
+    },
+    resNavLink: {
+        textDecoration: 'none',
+        color: '#000'
+    },
     resLogo: {
         width: '75px',
         height: '66px'
@@ -213,6 +220,12 @@ const useStyles = makeStyles((theme) => ({
     smBasketWrap: {
         display: 'flex',
         alignItems: 'center',
+        "& > a": {
+            display: 'flex',
+            alignItems: 'center',
+            textDecoration: 'none',
+            color: '#000'
+        }
     },
 
     // for overlay

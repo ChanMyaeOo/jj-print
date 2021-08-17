@@ -7,7 +7,7 @@ const PreviewItem = ({ imgUrl, title, price, details, altText }) => {
     const classes = useStyles();
     return (
         <div className={classes.previewItemWrap}>
-            <Link to={`${details}`}><img src={imgUrl} alt={altText} className={classes.leatherCoverImg} /></Link>
+            <Link to={`${details}`}><img src={imgUrl} alt={altText} className={classes.previewImg} /></Link>
             <div className={classes.titleWrap}><Link to={`${details}`} className={classes.previewTitle}>{title}</Link></div>
             <div>From: <span className={classes.previewPrice}>{price}</span></div>
             <Link className={classes.previewOrder}>Order Now</Link>
