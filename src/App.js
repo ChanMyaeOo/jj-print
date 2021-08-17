@@ -18,6 +18,7 @@ import SignIn from "./pages/sign-in/SignIn";
 import { useStateValue } from "./context/StateProvider";
 import { auth } from './firebase/firebase'
 import About from './pages/about/About'
+import Contact from './pages/contact/Contact'
 
 const promise = loadStripe(
     "pk_test_51JOFCUEi9v2WiQ6ftFZzfcvD2sNeld6MvmXwL217qJJBBXWcbr58blHqNhdG6yU4EbvR6TQfIAPlaNHSfFiSZQ3500l1NdFw1D"
@@ -48,6 +49,12 @@ const App = () => {
             <Switch>
                 <Route path="/sign-in">
                     <SignIn />
+                </Route>
+
+                <Route path="/contact">
+                    <Layout>
+                        <Contact />
+                    </Layout>
                 </Route>
 
                 <Route path="/about">
