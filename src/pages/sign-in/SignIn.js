@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import useStyles from './styles'
-import LogoImg from '../../images/logo.png'
+// import LogoImg from '../../images/logo.png'
+import LogoImg from '../../images/jj-logo.jpg'
 import { Link, useHistory } from 'react-router-dom'
 import { auth } from '../../firebase/firebase'
 

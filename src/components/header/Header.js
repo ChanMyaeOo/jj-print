@@ -8,7 +8,8 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import CloseIcon from "@material-ui/icons/Close";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import useStyles from "./styles";
-import Logo from "../../images/logo.png";
+// import Logo from "../../images/logo.png";
+import Logo from '../../images/jj-logo.jpg'
 import { useStateValue } from "../../context/StateProvider";
 import { auth } from '../../firebase/firebase'
 
@@ -82,8 +83,9 @@ const Header = () => {
                 <div>Ad Print Delivered in High Quality</div>
             </div>
             <div className={classes.headerWrap}>
-                <Link to="/">
+                <Link to="/" className={classes.logoHeader}>
                     <img src={Logo} alt="logo" className={classes.logo} />
+                    <span>JJ Design &amp; Print</span>
                 </Link>
                 <div>
                     <div>Mon. - Fri. 09:30 - 18:00 | Sat. 10:00 - 18:00</div>

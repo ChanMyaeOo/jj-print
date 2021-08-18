@@ -112,7 +112,20 @@ const useStyles = makeStyles((theme) => ({
     },
     logo: {
         width: '90px',
-        height: '76px'
+        height: '90px'
+    },
+    logoHeader: {
+        display: 'flex',
+        alignItems: 'center',
+        textDecoration: 'none',
+        "& > span": {
+            textTransform: "uppercase",
+            fontSize: '28px',
+            fontWeight: 'bold',
+            paddingLeft: '10px',
+            color: '#111',
+            letterSpacing: '1px'
+        }
     },
     headerWrap: {
         width: '90%',
@@ -223,7 +236,7 @@ const useStyles = makeStyles((theme) => ({
     },
     resLogo: {
         width: '75px',
-        height: '66px'
+        height: '75px'
     },
     smBasketWrap: {
         display: 'flex',
@@ -255,13 +268,13 @@ const useStyles = makeStyles((theme) => ({
     },
     sideBar: {
         width: '35%',
-        background: '#f2f2f2',
+        background: '#fff',
         height: '100%',
         overflowY: 'scroll'
     },
     sideBarLogo: {
         width: '95px',
-        height: '75px',
+        height: '95px',
         display: 'block',
         margin: '0 auto',
         padding: '25px 0'

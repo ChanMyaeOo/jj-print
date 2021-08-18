@@ -1,6 +1,7 @@
 import React from 'react'
-import LogoImg from '../../images/logo.png'
-import PaymentImg from '../../images/payment.jpg'
+import { Link } from 'react-router-dom'
+// import LogoImg from '../../images/logo.png'
+import LogoImg from '../../images/jj-logo.jpg'
 import StripeImg from '../../images/stripe.png'
 import useStyles from './styles'
 
@@ -9,7 +10,9 @@ const Footer = () => {
     return (
         <div className={classes.footerSection}>
             <div className={classes.footerWrap}>
-                <img src={LogoImg} alt="logo" className={classes.footerLogo} />
+                <Link to="/">
+                    <img src={LogoImg} alt="logo" className={classes.footerLogo} />
+                </Link>
 
                 <div className={classes.footerContact}>
                     <p className={classes.fContact}>Contact Us</p>
@@ -25,7 +28,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className={classes.copyright}>Copyright 2021 &copy; MBG Print</div>
+            <div className={classes.copyright}>Copyright 2021 &copy; JJ Design & Print</div>
         </div>
     )
 }

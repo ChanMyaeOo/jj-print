@@ -5,13 +5,13 @@ const useStyles = makeStyles((theme) => ({
     signIn: {
         width: '70%',
         margin: '0 auto',
-        background: '#ddd',
+        background: '#fff',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     signInLogo: {
-        width: '130px',
+        width: '120px',
         padding: '25px 0'
     },
     signInFormWrap: {

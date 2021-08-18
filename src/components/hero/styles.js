@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
-import HeroImg from '../../images/flyer.jpg'
+// import HeroImg from '../../images/flyer.jpg'
+import HeroImg from '../../images/2logo.jpg'
 
 const useStyles = makeStyles((theme) => ({
     heroWrap: {
@@ -7,7 +8,8 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '15px'
     },
     heroContent: {
-        background: `linear-gradient( rgba(0, 0, 0, 0.6) 100%, rgba(0, 0, 0, 0.5) 100%),url(${HeroImg})`,
+        // background: `linear-gradient( rgba(0, 0, 0, 0.6) 100%, rgba(0, 0, 0, 0.5) 100%),url(${HeroImg})`,
+        background: `url(${HeroImg})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
@@ -34,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('md')]: {
         heroContent: {
+            backgroundSize: 'contain',
             "& > h2": {
                 fontSize: '40px'
             },
@@ -49,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down('xs')]: {
          heroContent: {
+             height: '200px',
             "& > h2": {
                 fontSize: '27px'
             },
