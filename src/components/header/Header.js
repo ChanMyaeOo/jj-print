@@ -147,7 +147,7 @@ const Header = () => {
                             </ul>
                         </div>
                     </li>
-                    <li><Link className={classes.hdNavLink} to="/business-cards-details">business cards</Link></li>
+                    <li><Link className={classes.hdNavLink} to="/business-cards-details" >business cards</Link></li>
                     <li className={classes.flyer}>
                         flyers
                         <div className={classes.flyerSubNav}>

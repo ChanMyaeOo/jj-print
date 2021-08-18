@@ -15,7 +15,9 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: '2px 2px 2px rgba(0,0,0,0.5)'
     },
     barWrap: {
-        background: '#000',
+        // background: '#000',
+        background: "rgb(31,164,221)",
+        background: "linear-gradient(90deg, rgba(31,164,221,1) 2%, rgba(84,76,214,1) 55%)",
         width: '100%',
         "& > div": {
             color: '#fff',
@@ -34,6 +36,11 @@ const useStyles = makeStyles((theme) => ({
             listStyle: 'none',
             padding: '9px 15px'
         }
+    },
+
+    firstColor: {
+        background: "rgb(254,207,93)",
+        background: "linear-gradient(90deg, rgba(254,207,93,0.969625350140056) 45%, rgba(245,191,62,0.896796218487395) 63%)"
     },
 
     hdLinks: {
@@ -121,7 +128,8 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '35px'
     },
     navWrap: {
-        background: '#7f3119'
+        // background: 'linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(255,208,90,1), rgba(255,189,121,1) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%)'
+        background: 'linear-gradient(217deg, rgb(140 249 132), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(255,208,90,1), rgb(250 153 188) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%)'
     },
     nav: {
         display: 'flex',
