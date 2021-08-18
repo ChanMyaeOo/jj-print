@@ -7,8 +7,8 @@ const Hero = () => {
     return (
         <div className={classes.heroWrap}>
             <div className={classes.heroContent}>
-                {/* <h2>CUSTOM-MADE FLYERS</h2>
-                <h3>Flyers available at excellent prices, in various different colours and paper types.</h3> */}
+                <h2>CUSTOM-MADE FLYERS</h2>
+                <h3>Flyers available at excellent prices, in various different colours and paper types.</h3>
             </div> 
         </div>
     )

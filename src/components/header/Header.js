@@ -9,7 +9,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import useStyles from "./styles";
 // import Logo from "../../images/logo.png";
-import Logo from '../../images/jj-logo.jpg'
+import Logo from '../../images/jj-headerlogo.png'
 import { useStateValue } from "../../context/StateProvider";
 import { auth } from '../../firebase/firebase'
 
@@ -85,11 +85,11 @@ const Header = () => {
             <div className={classes.headerWrap}>
                 <Link to="/" className={classes.logoHeader}>
                     <img src={Logo} alt="logo" className={classes.logo} />
-                    <span>JJ Design &amp; Print</span>
+                    {/* <span>JJ Design &amp; Print</span> */}
                 </Link>
                 <div>
                     <div>Mon. - Fri. 09:30 - 18:00 | Sat. 10:00 - 18:00</div>
-                    <div className={classes.headerPhone}>020 7289 9000</div>
+                    <div className={classes.headerPhone}>+442038387246</div>
                 </div>
             </div>
 

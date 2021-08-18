@@ -14,19 +14,18 @@ const useStyles = makeStyles((theme) => ({
     },
 
     orderGrid: {
-        borderRight: '1px dashed #f2f2f2'
+        // borderRight: '1px dashed #f2f2f2'
     },
 
     orderWrap: {
         width: '95%',
         margin: '0 auto',
-        background: 'rgb(56, 56, 56)',
+        // background: 'rgb(56, 56, 56)',
     },
 
     orderImg: {
         background: 'rgb(56, 56, 56)',
-        width: '80px',
-        height: '80px',
+        width: '100%',
     },
 
     orderImgWrap: {

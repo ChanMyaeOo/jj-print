@@ -111,8 +111,8 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center'
     },
     logo: {
-        width: '90px',
-        height: '90px'
+        width: '420px',
+        // height: '90px'
     },
     logoHeader: {
         display: 'flex',
@@ -133,6 +133,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '0 auto',
         justifyContent: 'space-between',
         alignItems: 'center',
+        padding: '10px 0'
         
     },
     headerPhone: {
