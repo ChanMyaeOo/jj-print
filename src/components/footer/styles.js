@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme) => ({
         padding: '25px 15px'
     },
     footerLogo: {
-        width: '100px',
-        height: '100px'
+        width: '300px',
+        // height: '100px'
     },
     footerContact: {
         padding: '0 25px'

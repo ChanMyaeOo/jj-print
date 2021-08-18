@@ -225,8 +225,8 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '0 15px',
-        borderBottom: '1px solid #ddd'
+        padding: '10px 15px',
+        borderBottom: '1px solid #ddd',
     },
     resHeaderLink: {
         color: '#666'
@@ -236,8 +236,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#000'
     },
     resLogo: {
-        width: '75px',
-        height: '75px'
+        width: '205px',
     },
     smBasketWrap: {
         display: 'flex',
@@ -274,8 +273,7 @@ const useStyles = makeStyles((theme) => ({
         overflowY: 'scroll'
     },
     sideBarLogo: {
-        width: '95px',
-        height: '95px',
+        width: '195px',
         display: 'block',
         margin: '0 auto',
         padding: '25px 0'

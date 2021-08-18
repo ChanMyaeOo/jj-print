@@ -43,8 +43,8 @@ const Contact = () => {
        <div className={classes.contact}>
            <h2>Get In Touch</h2>
            <p>Contact us today:</p>
-           <p>- 020 7289 9000</p>
-           <p>- info@jjprint.com</p>
+           <p>+442038387246</p>
+           <p>info@jjdesignprint.com</p>
 
            <form className={classes.contactForm} onSubmit={sendMail}>
                <input type="text" value={formData.user_name} placeholder="Your Name (required)" name="user_name" required onChange={handleChange}/>

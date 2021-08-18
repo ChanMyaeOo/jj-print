@@ -6,7 +6,7 @@ const About = () => {
     return (
         <div className={classes.about}>
             <h1>About Us</h1>
-            <p>At MBG, we strive to provide our clients with the highest quality and most professional looking designs. A printing store with many years of experience, we use state-of-the-art printing machines (Digital & Litho) and equipment to achieve the highest and most professional looking work.</p>
+            <p>At JJ Design & Print, we strive to provide our clients with the highest quality and most professional looking designs. A printing store with many years of experience, we use state-of-the-art printing machines (Digital & Litho) and equipment to achieve the highest and most professional looking work.</p>
             <br/>
             <p>Our friendly but very helpful staff ensures that you get the best value for your money with professional, high-quality printed products that will leave you satisfied with the final result. Our company is passionate about helping businesses and individuals with the best designs and quality print products: products that will help them or their business look great.</p>
             <br/>

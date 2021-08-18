@@ -256,7 +256,7 @@ const Header = () => {
                         <div>Mon. - Fri. 09:30 - 18:00</div>
                         <div>Sat. 10:00 - 18:00</div>
                         <div className={classes.sidebarPhone}>
-                            020 7289 9000
+                            +442038387246
                         </div>
                     </div>
                 </div>
