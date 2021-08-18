@@ -29,16 +29,16 @@ const Header = () => {
     };
 
     // to handle header fixed on scroll
-    const toggleVisible = () => {
-        const scrolled = document.documentElement.scrollTop;
-        const headerElement = document.getElementById("header");
-        if (scrolled > 300) {
-            headerElement.classList.add(classes.fixedHeader);
-        } else if (scrolled <= 300) {
-            headerElement.classList.remove(classes.fixedHeader);
-        }
-    };
-    window.addEventListener("scroll", toggleVisible);
+    // const toggleVisible = () => {
+    //     const scrolled = document.documentElement.scrollTop;
+    //     const headerElement = document.getElementById("header");
+    //     if (scrolled > 300) {
+    //         headerElement.classList.add(classes.fixedHeader);
+    //     } else if (scrolled <= 300) {
+    //         headerElement.classList.remove(classes.fixedHeader);
+    //     }
+    // };
+    // window.addEventListener("scroll", toggleVisible);
 
     const handleAuthentication = () => {
         if (user) {
@@ -89,7 +89,7 @@ const Header = () => {
                 </Link>
                 <div>
                     <div>Mon. - Fri. 09:30 - 18:00 | Sat. 10:00 - 18:00</div>
-                    <div className={classes.headerPhone}>+442038387246</div>
+                    <div className={classes.headerPhone}>info@jjdesignprint.com</div>
                 </div>
             </div>
 

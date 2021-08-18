@@ -137,9 +137,10 @@ const useStyles = makeStyles((theme) => ({
         
     },
     headerPhone: {
-        color: '#27aabb',
+        color: '#333',
         fontWeight: '700',
-        fontSize: '35px'
+        fontSize: '20px',
+        paddingTop: '5px'
     },
     navWrap: {
         // background: 'linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(255,208,90,1), rgba(255,189,121,1) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%)'

@@ -43,6 +43,16 @@ const useStyles = makeStyles((theme) => ({
         color: '#f2f2f2',
         width: '100%'
     },
+    [theme.breakpoints.down('sm')]: {
+         footerWrap: {
+            flexDirection: 'column',
+            alignItems: 'center',
+            padding: '25px 0'
+        }, 
+        footerContact: {
+            padding: '25px 0'
+        }
+    },
     [theme.breakpoints.down('xs')]: {
         footerWrap: {
             flexDirection: 'column',
