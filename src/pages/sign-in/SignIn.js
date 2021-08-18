@@ -38,9 +38,6 @@ const SignIn = () => {
 
     return (
         <div className={classes.signIn}>
-            <Link to="/">
-                <img src={LogoImg} alt="logo img" className={classes.signInLogo}/>
-            </Link>
 
             <div className={classes.signInFormWrap}>
                 <h1>Sign In</h1>

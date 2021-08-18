@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
     signIn: {
         width: '70%',
-        margin: '0 auto',
+        margin: '30px auto',
         background: '#fff',
         display: 'flex',
         flexDirection: 'column',
@@ -36,6 +36,21 @@ const useStyles = makeStyles((theme) => ({
         color: '#fff',
         fontSize: '15px',
         border: 'none'
+    },
+
+    [theme.breakpoints.down('xs')]: {
+        signIn: {
+            width: '90%',
+            padding: '10px',
+            margin: '25px auto',
+        },
+        signInFormWrap: {
+            "& > form > input": {
+                height: '30px',
+                padding: '0 5px',
+                width: '90%'
+            },
+        }
     }
 }));
 export default useStyles;

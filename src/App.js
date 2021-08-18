@@ -48,7 +48,9 @@ const App = () => {
             <ScrollToTop />
             <Switch>
                 <Route path="/sign-in">
-                    <SignIn />
+                    <Layout>
+                        <SignIn />
+                    </Layout>
                 </Route>
 
                 <Route path="/contact">
